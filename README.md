@@ -14,3 +14,12 @@ create table gps(id int not null auto_increment primary key, timestamp timestamp
 It all uses very old python/matplotlib because of using it on very very old hardware incapable of anything newer than Debian Jessie
 Hope to move into something newer in future but lack of job and money f#&s with my head.
 
+
+## generating json
+
+e.g.
+
+```
+gpspipe -w -n15|grep "SKY"|jq '.satellites' >/tmp/gps1.json
+```
+
